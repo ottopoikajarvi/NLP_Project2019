@@ -100,18 +100,13 @@ def nounPhraseTree(tree, depth):
             nounPhraseTree(kid, depth + 1)
     
 
-"""sentences = ["Autot ovat nopeita.", "Sähkö on tulevaisuuden avain.", "Englannissa äänestetään brexitistä."
-			, "Tämä tietokone käyttäytyy hitaasti ja paskasti.", "Saksa vastustaa brexit:ä."
-            , "Vihreät autot ovat suurissa alennusmyynneissä tylsän brexitin takia.", "Brexit on tapahtunut hitaasti ja arvaamattomasti."
-            , "Odotettu brexit tapahtuu pian.", "Uudella brexit-johtajalla on paljon pelissä.", "Brexitin aatto koittaa Englannissa."]
-"""
-
 starttime = time.time()
 sents = dict()
 with open('organizedsent.pckl', 'rb') as f:
     sents = pickle.load(f)
     f.close()
     
+#Test if dir for some reason doesn't exist
 try:
     # Create target Directory
     os.mkdir("tnparserimages")
@@ -184,13 +179,13 @@ def sentToServer(sentences, month):
         plt.close()
     
     
-    print(counts)
-    print(counts2)
-    print(counts3)
+    #print(counts)
+    #print(counts2)
+    #print(counts3)
     
 for key in sents:
     sentences = sents[key]
-    print(key)
+    print("Analysing sentences from " + str(key))
     sentToServer(sentences, key)
     
 endtime = time.time() - starttime

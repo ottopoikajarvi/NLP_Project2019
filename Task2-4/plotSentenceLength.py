@@ -16,4 +16,5 @@ def plotSentenceLength(sentences):
     meansDF=pd.merge(meansDF,emptyDF,how='outer', on=['date'])
 
     meansDF.sort_values(by=['date']).plot.bar(x='date',y='length',figsize = (13.5, 9))
+    plt.savefig('tnparserimages/sentencelength.png')
     plt.show()
