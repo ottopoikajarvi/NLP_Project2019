@@ -1,4 +1,5 @@
 import pickle
+import plotSentenceLength as pltlen
 
 sentences = []
 
@@ -6,6 +7,8 @@ with open('yleSentences.pckl', 'rb') as f:
     sentences = pickle.load(f)
     f.close()
 
+pltlen.plotSentenceLength(sentences)
+    
 datedict = dict()
 for i in sentences:
     date = i[0]
