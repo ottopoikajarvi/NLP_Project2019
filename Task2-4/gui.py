@@ -11,7 +11,7 @@ master = tk.Tk()
 tk.Label(master, text="""Yle news "brexit" sentence analyser""").grid(row=0)
 tk.Label(master, text="Brexit").grid(row=0, column=1)
 tk.Label(master, text="Enter a second\nsearch term (optional)").grid(row=1)
-tk.Label(master, text="Program will output status updates to terminal\nSome plots will be pop up\nThe analysing process continues after they are closed").grid(row=2, columnspan=2)
+tk.Label(master, text="Program will output status updates to terminal\nSome plots will be pop up\nThe analysing process continues after they are closed\nFigures are saved in ./tnparserimages-folder").grid(row=2, columnspan=2)
 
 entry = tk.Entry(master)
 
