@@ -153,12 +153,13 @@ def sentToServer(sentences, month):
     nounss = sorted(counts3.items(), key=lambda x: x[1], reverse=True)
     verbss = sorted(counts2.items(), key=lambda x: x[1], reverse=True)
     
-    lab, amount = zip(*postags)
-    plt.figure(figsize=(12, 9))
-    plt.title(month + ' POS tags')
-    plt.pie(amount, labels=lab, autopct='%1.1f%%')
-    plt.savefig("tnparserimages/" + month + 'pos.png')
-    plt.close()
+    if len(postags) > 0:
+        lab, amount = zip(*postags)
+        plt.figure(figsize=(12, 9))
+        plt.title(month + ' POS tags')
+        plt.pie(amount, labels=lab, autopct='%1.1f%%')
+        plt.savefig("tnparserimages/" + month + 'pos.png')
+        plt.close()
     
     
     if len(nounss) > 0:
