@@ -125,7 +125,7 @@ if __name__ == "__main__":
         
         f.write("Times of word appearance: " + str(times))
         f.write("\n")
-        f.write("Appearance times divided to years: " + str(years))
+        f.write(str(years))
         f.write("\n")
         f.write("Word: " + str(searched_word))
         f.close()
