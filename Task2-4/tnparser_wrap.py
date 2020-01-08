@@ -213,12 +213,13 @@ postags = sorted(counts.items(), key=lambda x: x[1], reverse=True)
 nounss = sorted(counts3.items(), key=lambda x: x[1], reverse=True)
 verbss = sorted(counts2.items(), key=lambda x: x[1], reverse=True)
 
-lab, amount = zip(*postags)
-plt.figure(figsize=(12, 9))
-plt.title('POS tags')
-plt.pie(amount, labels=lab, autopct='%1.1f%%')
-plt.savefig('tnparserimages/allpos.png')
-plt.show()
+if len(postags) > 0:
+    lab, amount = zip(*postags)
+    plt.figure(figsize=(12, 9))
+    plt.title('POS tags')
+    plt.pie(amount, labels=lab, autopct='%1.1f%%')
+    plt.savefig('tnparserimages/allpos.png')
+    plt.show()
 
 
 if len(nounss) > 0:
@@ -237,3 +238,5 @@ if len(verbss) > 0:
     plt.bar(x2,y2)
     plt.savefig('tnparserimages/allverb.png')
     plt.show()
+    
+exit()

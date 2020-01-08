@@ -23,7 +23,7 @@ if len(sys.argv) == 2:
             if word.startswith(stemarg):
                 sentences.append(sent)
 else:
-    sentences = origsententes
+    sentences = origsentences
     
 print("Found " + str(len(sentences)) + " sentences")
 if len(sentences) == 0:
