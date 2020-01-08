@@ -8,7 +8,7 @@ with open("time_results.txt", encoding="utf-8") as f:
         timedata = json.loads(json_acceptable_string)
 
 #Edit this to edit the searched word on top of the graph
-searched_word = "esimerkki"
+searched_word = "fanittaa"
 
 
 plt.figure(figsize=(20,10))
