@@ -2,7 +2,7 @@
 
 Otto Poikajärvi, Julius Hekkala, Aleksi Juurikka
 
-Task 2-4 requires Turku neural parse pipeline running in server mode https://turkunlp.org/Turku-neural-parser-pipeline/
+Task 2-4 requires Turku neural parser pipeline running in server mode https://turkunlp.org/Turku-neural-parser-pipeline/
 Dataset for task 1: Kielipankki Downloads Suomi 24 Dataset https://korp.csc.fi/download/Suomi24/ (click the folder '2001-2015')
 
 Dataset for tasks 2-4: Yle news 2011-2018 dataset https://korp.csc.fi/download/YLE/fi/
@@ -21,3 +21,14 @@ appearance_searcher.py searches for instances of a word in the dataset. The sear
 appearance_visualizer.py visualizes the data in time_results.txt. You need to run appearance_searcher.py before you can run appearance_visualizer.py.
 
 You can change the dataset directory name in the scripts if you want to. Remember to check that the "directoryname" variable points to the correct directory. "search_file" represents the file with the searched word's different forms. Edit the "searched_word" variable in appearance_visualizer.py to edit the word shown in the bar graph.
+
+## What you need to do to run task 2-4 implementation
+
+### NOTICE: The task 2-4 implementation has only been tested on Linux
+Requirements: nltk, stop-words, matplotlib, pandas, Turku neural parser pipeline, CoNLL-U Parser https://pypi.org/project/conllu/
+
+Python 3 should start with python3 command in terminal.
+
+Start Turku neural parser pipeline according to the installation guide, use server mode.
+
+Use python-scripts found in data_preparation to prepare the dataset. Run gui.py in order to start the UI. Then use the UI to limit the dataset and send wanted sentences to the Turku neural parser pipeline and to draw figures of the results. 
