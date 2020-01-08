@@ -31,4 +31,4 @@ Python 3 should start with python3 command in terminal.
 
 Start Turku neural parser pipeline according to the installation guide, use server mode.
 
-Use python-scripts found in data_preparation to prepare the dataset. Run gui.py in order to start the UI. Then use the UI to limit the dataset and send wanted sentences to the Turku neural parser pipeline and to draw figures of the results. 
+Use python-scripts found in data_preparation to prepare the dataset. The UI uses tkinter. Run gui.py in order to start the UI. Then use the UI to limit the dataset and send wanted sentences to the Turku neural parser pipeline and to draw figures of the results. 
