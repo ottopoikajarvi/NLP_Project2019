@@ -32,3 +32,13 @@ Python 3 should start with python3 command in terminal.
 Start Turku neural parser pipeline according to the installation guide, use server mode.
 
 Use python-scripts found in data_preparation to prepare the dataset. The pickled sentences-file has to be in the same folder as gui.py, pickleopener.py, plotSentenceLength.py and tnparser_wrap.py. The UI uses tkinter. Run gui.py in order to start the UI. Then use the UI to limit the dataset and send wanted sentences to the Turku neural parser pipeline and to draw figures of the results. 
+
+Output examples:
+Words in noun phrases for all sentences with "brexit"
+![Words in noun phrases](/allnoun.png)
+
+
+Main verbs of sentences with "brexit", June 2017
+![June 2017 main verbs](/201706verb.png)
+"Äänestää" (to vote) is present in the later figure, maybe because of the UK General Election.
+
